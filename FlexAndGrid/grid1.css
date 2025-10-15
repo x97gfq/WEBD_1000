@@ -5,6 +5,11 @@
   grid-template-rows: auto;
   grid-gap: 10px;
 }
+.grid-item {
+  background-color: cadetblue;
+  color: white;
+  padding: 2px;
+}
 header, footer {
   grid-column: 1 / 3;
 }

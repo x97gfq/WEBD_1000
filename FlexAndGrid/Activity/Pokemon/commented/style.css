@@ -1,0 +1,54 @@
+/* Reset default margin and padding, and set box-sizing for consistent layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body element */
+body {
+    font-family: Arial, sans-serif; /* Sets a clean, readable font */
+    background-color: #f0f0f0;      /* Light gray background for contrast */
+    padding: 20px;                  /* Adds space around the content */
+}
+
+/* Container uses CSS Grid to layout the cards responsively */
+.container {
+    display: grid; /* Enables grid layout */
+    
+    /* Creates as many columns as will fit, each at least 150px wide */
+    /* 'auto-fit' fills the row with as many columns as possible */
+    /* 'minmax(150px, 1fr)' ensures each column is at least 150px wide and can grow */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    
+    gap: 20px; /* Adds space between grid items */
+}
+
+/* Styling for each individual Pokémon card */
+.card {
+    background-color: white; /* White background for contrast */
+    padding: 15px;           /* Inner spacing around content */
+    border-radius: 8px;      /* Rounded corners for a softer look */
+    
+    /* Adds a subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    /* Use Flexbox to align content vertically */
+    display: flex;
+    flex-direction: column;  /* Stack image and text vertically */
+    align-items: center;     /* Center content horizontally */
+    text-align: center;      /* Center text inside the card */
+}
+
+/* Styling for the Pokémon image */
+.card img {
+    width: 100px;        /* Fixed width for consistency */
+    height: auto;        /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Space between image and name */
+}
+
+/* Styling for the Pokémon name */
+.card h3 {
+    font-size: 1.1em; /* Slightly larger than default text */
+    color: #333;      /* Dark gray for readability */
+}
